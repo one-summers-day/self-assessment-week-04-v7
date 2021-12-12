@@ -9,11 +9,18 @@ var Schemas = {
   OPTION_6: 'option 6'
 };
 
-var sqlPublisherAuthorSchema =  Schemas.FIX_ME; // TODO: Update this constant
-// TODO: Write a comment here explaining your choice
+/*
+  * publisher, has many authors, has one genre
+  * author, has many publishers, has many genres
+  * genre, has many publishers, has many authors
+*/
 
-var sqlPublisherGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
-// TODO: Write a comment here explaining your choice
+var sqlPublisherAuthorSchema =  Schemas.OPTION_6; // TODO: Update this constant
+// Many to many relationship, best to store in a join table.
 
-var sqlAuthorGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
-// TODO: Write a comment here explaining your choice
+var sqlPublisherGenreSchema =  Schemas.OPTION_4; // TODO: Update this constant
+// A many to one relationship. Publisher can have only one genre, so can store a single ID.
+//Genre's many publishers can be found by searching publisher where id_genre matches the id/name row of genre table.
+
+var sqlAuthorGenreSchema =  Schemas.OPTION_6; // TODO: Update this constant
+// Another many to many, reasoning is the same.
