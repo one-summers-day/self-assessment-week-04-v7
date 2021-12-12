@@ -9,11 +9,17 @@ var Schemas = {
   OPTION_6: 'option 6'
 };
 
-var sqlPublisherAuthorSchema =  Schemas.FIX_ME; // TODO: Update this constant
+var sqlPublisherAuthorSchema =  Schemas.OPTION_6; // TODO: Update this constant
 // TODO: Write a comment here explaining your choice
 
-var sqlPublisherGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
+// The publisher has many authors and vice versa. This is a many to many relation, we should use a helper table in here.
+
+var sqlPublisherGenreSchema =  Schemas.OPTION_4; // TODO: Update this constant
 // TODO: Write a comment here explaining your choice
 
-var sqlAuthorGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
+// There is only 1 genre but there can be many publishers for the same genre. So this is a one (genre) to many (publisher) relationship, number 4 is the choice here.
+
+var sqlAuthorGenreSchema =  Schemas.OPTION_6; // TODO: Update this constant
 // TODO: Write a comment here explaining your choice
+
+// There can be many authors for a genre and many genre for an author. Like Publisher and Author, this is a many to many relationship. Option 6 is the way to go.
