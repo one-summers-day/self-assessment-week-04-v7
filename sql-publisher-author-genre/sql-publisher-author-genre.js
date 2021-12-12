@@ -9,11 +9,17 @@ var Schemas = {
   OPTION_6: 'option 6'
 };
 
-var sqlPublisherAuthorSchema =  Schemas.FIX_ME; // TODO: Update this constant
+var sqlPublisherAuthorSchema =  Schemas.OPTION_6; // TODO: Update this constant
 // TODO: Write a comment here explaining your choice
+// Because one publisher has many authors, and one author has many publishers
+// we can create a join table to create two one-to-many relations
 
-var sqlPublisherGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
+var sqlPublisherGenreSchema =  Schemas.OPTION_3; // TODO: Update this constant
 // TODO: Write a comment here explaining your choice
+// Since publishers only have one genre, we can give our genre table a foreign key
+// of id_publisher
 
-var sqlAuthorGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
+var sqlAuthorGenreSchema =  Schemas.OPTION_6; // TODO: Update this constant
 // TODO: Write a comment here explaining your choice
+// Because we have a many-to-many relation between authors and genres
+// we can again create a join table to create two one-to-many relations
