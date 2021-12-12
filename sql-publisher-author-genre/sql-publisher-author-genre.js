@@ -9,11 +9,11 @@ var Schemas = {
   OPTION_6: 'option 6'
 };
 
-var sqlPublisherAuthorSchema =  Schemas.FIX_ME; // TODO: Update this constant
-// TODO: Write a comment here explaining your choice
+var sqlPublisherAuthorSchema =  Schemas.OPTION_6; // TODO: Update this constant
+// many to many
 
-var sqlPublisherGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
-// TODO: Write a comment here explaining your choice
+var sqlPublisherGenreSchema =  Schemas.OPTION_4; // TODO: Update this constant
+// 1 to many
 
-var sqlAuthorGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
-// TODO: Write a comment here explaining your choice
+var sqlAuthorGenreSchema =  Schemas.OPTION_6; // TODO: Update this constant
+// many to many
