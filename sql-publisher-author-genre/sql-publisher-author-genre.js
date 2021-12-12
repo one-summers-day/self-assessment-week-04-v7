@@ -9,11 +9,11 @@ var Schemas = {
   OPTION_6: 'option 6'
 };
 
-var sqlPublisherAuthorSchema =  Schemas.FIX_ME; // TODO: Update this constant
-// TODO: Write a comment here explaining your choice
+var sqlPublisherAuthorSchema =  Schemas.OPTION_6;
+// Publishers and authors have a many-to-many relationship. We cannot easily store the foreign id in each table, so instead we create an association table with one row per relationship.
 
-var sqlPublisherGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
-// TODO: Write a comment here explaining your choice
+var sqlPublisherGenreSchema =  Schemas.OPTION_4;
+// Publishers and genres have a many-to-one relationship. So we can store the one genre_id in the publisher table as a foreign key.
 
-var sqlAuthorGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
-// TODO: Write a comment here explaining your choice
+var sqlAuthorGenreSchema =  Schemas.OPTION_6;
+// Authors and genres have a many-to-many relationship. We cannot easily store the foreign id in each table, so instead we create an association table with one row per relationship.
