@@ -27,7 +27,7 @@ var sqlPublisherGenreSchema =  Schemas.OPTION_4; // TODO: Update this constant
 //Publisher has Foreign key "id_genre" for genre.
 
 
-var sqlAuthorGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
+var sqlAuthorGenreSchema =  Schemas.OPTION_6; // TODO: Update this constant
 // TODO: Write a comment here explaining your choice
 //author has many genres, genre has many authors -> Many to many
-// In many to many case we need additional table 
+// In many to many case we need additional table
