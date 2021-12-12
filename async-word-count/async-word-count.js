@@ -39,7 +39,6 @@ var getTotalWordCount = function(filePathOne, filePathTwo, callback) {
         // add up the two word counts
         var totalWordCount = wordCountOne + wordCountTwo;
         // output the data.
-        console.log(totalWordCount);
         callback(null, totalWordCount);
       });
     })
