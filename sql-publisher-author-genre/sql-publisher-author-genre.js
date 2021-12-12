@@ -9,11 +9,12 @@ var Schemas = {
   OPTION_6: 'option 6'
 };
 
-var sqlPublisherAuthorSchema =  Schemas.FIX_ME; // TODO: Update this constant
-// TODO: Write a comment here explaining your choice
+var sqlPublisherAuthorSchema =  Schemas.OPTION_6; // TODO: Update this constant
+// Because publishers and authors have a many-to-many relationship, an associative table would be best to properly represent it. Otherwise, the foreign key for each would have multiple entries.
 
-var sqlPublisherGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
-// TODO: Write a comment here explaining your choice
+var sqlPublisherGenreSchema =  Schemas.OPTION_4; // TODO: Update this constant
+// A publisher has one genre but a genre has many publishers. With this one-to-many relationship, the foreign key would need to be stored in the publishers table since the other way around would result in multiple entries for each genre.
 
-var sqlAuthorGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
-// TODO: Write a comment here explaining your choice
+var sqlAuthorGenreSchema =  Schemas.OPTION_6; // TODO: Update this constant
+// Because authors and genrees have a many-to-many relationship, an associative table would be best to properly represent it. Otherwise, the foreign key for each would have multiple entries.
+
