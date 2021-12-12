@@ -9,11 +9,13 @@ var Schemas = {
   OPTION_6: 'option 6'
 };
 
-var sqlPublisherAuthorSchema =  Schemas.FIX_ME; // TODO: Update this constant
+var sqlPublisherAuthorSchema =  Schemas.OPTION_6; // TODO: Update this constant
 // TODO: Write a comment here explaining your choice
+/* Since publisher has many authors and authors has many publishers, we have a many to many relationship, which should be handled with third joined table */
 
-var sqlPublisherGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
+var sqlPublisherGenreSchema =  Schemas.OPTION_3; // TODO: Update this constant
 // TODO: Write a comment here explaining your choice
-
-var sqlAuthorGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
+/* Since publisher only has one genre, we should set publisher's id to be genre's foreign id */
+var sqlAuthorGenreSchema =  Schemas.OPTION_6; // TODO: Update this constant
 // TODO: Write a comment here explaining your choice
+/* Since publisher has many authors and authors has many publishers, we have a many to many relationship, which should be handled with third joined table */
