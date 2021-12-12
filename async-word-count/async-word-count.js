@@ -14,6 +14,12 @@ var getWordCount = function(filePath, callback) {
 };
 
 var getTotalWordCount = function(filePathOne, filePathTwo, callback) {
+  (error, () => {
+    if error {
+      callback (error)
+    }
+    callback(null, filePathOne, filePathTwo)
+  })
   //put filepath 1 into gwc
   //put file 2 into gwc
   //error first callback
