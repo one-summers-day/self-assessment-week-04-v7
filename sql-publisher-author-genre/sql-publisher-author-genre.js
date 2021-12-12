@@ -9,11 +9,14 @@ var Schemas = {
   OPTION_6: 'option 6'
 };
 
-var sqlPublisherAuthorSchema =  Schemas.FIX_ME; // TODO: Update this constant
+var sqlPublisherAuthorSchema =  Schemas.OPTION_6; // TODO: Update this constant
 // TODO: Write a comment here explaining your choice
+//Each publisher has many authors, and each authoer has many publishers. Therefore you need a join table to map out the relationship.
 
-var sqlPublisherGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
+var sqlPublisherGenreSchema =  Schemas.OPTION_4; // TODO: Update this constant
 // TODO: Write a comment here explaining your choice
+//The publisher only has one genre so genre becomes the source of truth. This is a one to many relationship.
 
-var sqlAuthorGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
+var sqlAuthorGenreSchema =  Schemas.OPTION_6; // TODO: Update this constant
 // TODO: Write a comment here explaining your choice
+//This is the same as the publisher authors as its a many to many relationship. The genre has many authors and each author has many genres. Therefore you also need a join table to map the relationship.
