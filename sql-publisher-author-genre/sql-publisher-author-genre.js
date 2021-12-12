@@ -9,11 +9,11 @@ var Schemas = {
   OPTION_6: 'option 6'
 };
 
-var sqlPublisherAuthorSchema =  Schemas.FIX_ME; // TODO: Update this constant
-// TODO: Write a comment here explaining your choice
+var sqlPublisherAuthorSchema =  Schemas.OPTION_6; // TODO: Update this constant
+// Publishers have many authors and authors have many publishers, so this is a many-to-many relationship. In these cases, we want to create a third table that links publisher ids to author ids, as is the case in option 6.
 
-var sqlPublisherGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
-// TODO: Write a comment here explaining your choice
+var sqlPublisherGenreSchema =  Schemas.OPTION_4; // TODO: Update this constant
+// Publishers have one genre, and genres have many publishers, so this is a one-to-many relationship. In this case, we want to add a foreign key corresponding to the id field in the genre table to to the publisher table, which is option 4.
 
-var sqlAuthorGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
-// TODO: Write a comment here explaining your choice
+var sqlAuthorGenreSchema =  Schemas.OPTION_6; // TODO: Update this constant
+// Authors have many genres, and genres have many authors, so this is a many-to-many relationship. In these cases, we want to create a third table that links author ids with genre ids, which is option 6.
