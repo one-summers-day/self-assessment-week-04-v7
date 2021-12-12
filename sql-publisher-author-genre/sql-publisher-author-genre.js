@@ -9,11 +9,17 @@ var Schemas = {
   OPTION_6: 'option 6'
 };
 
-var sqlPublisherAuthorSchema =  Schemas.FIX_ME; // TODO: Update this constant
+var sqlPublisherAuthorSchema =  Schemas.OPTION_5; // TODO: Update this constant
 // TODO: Write a comment here explaining your choice
+// 1 publisher, has many authors and 1 author, has many publishers: many to many relationship
 
-var sqlPublisherGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
+var sqlPublisherGenreSchema =  Schemas.OPTION_4; // TODO: Update this constant
 // TODO: Write a comment here explaining your choice
+//1 publisher has one genre and 1 genre has many publishers: many to 1
+var sqlAuthorGenreSchema =  Schemas.OPTION_5; // TODO: Update this constant
+// TODO: Write a comment here explaining your choice
+//1 author has many genres and 1 genre has many authors : many to many
 
-var sqlAuthorGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
-// TODO: Write a comment here explaining your choice
+// 1 publisher, has many authors, has one genre
+// 1 author, has many publishers, has many genres
+// 1 genre, has many publishers, has many authors
