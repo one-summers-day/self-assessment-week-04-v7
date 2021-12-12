@@ -13,8 +13,29 @@ var getWordCount = function(filePath, callback) {
   });
 };
 
+// `getTotalWordCount` should pass the combined word count of the files located at `filePathOne` and `filePathTwo` to the `callback`
 var getTotalWordCount = function(filePathOne, filePathTwo, callback) {
-  // YOUR CODE HERE
+  // call the getWordCount function and pass the location filePath and a callback func
+  getWordCount(__dirname + filePathOne, function(err, wordCount1) {
+    // in the case are error
+    if (err) {
+      console.log(err);
+    } else {
+      getWordCount(__dirname + filePathTwo, function(err, wordCount2) {
+        if (err) {
+          console.log(err);
+        } else {
+          callback(null, wordCount1 + wordCount2);
+        }
+      });
+    }
+  });
 };
+
+
+// test
+getTotalWordCount('/files/fileOne.txt','/files/fileTwo.txt', (err, res) => {
+  console.log(res); // total word --> 137
+});
 
 module.exports = getTotalWordCount;
