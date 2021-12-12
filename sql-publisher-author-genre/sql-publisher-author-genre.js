@@ -8,12 +8,16 @@ var Schemas = {
   OPTION_5: 'option 5',
   OPTION_6: 'option 6'
 };
-
-var sqlPublisherAuthorSchema =  Schemas.FIX_ME; // TODO: Update this constant
+//maybe 3 or 4?
+var sqlPublisherAuthorSchema =  Schemas.OPTION_3; // TODO: Update this constant
 // TODO: Write a comment here explaining your choice
 
-var sqlPublisherGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
+//both publishers and authors have one to many relation, either choice 3 or 4
+var sqlPublisherGenreSchema =  Schemas.OPTION_3; // TODO: Update this constant
 // TODO: Write a comment here explaining your choice
+//many to many relation, need publisher's id in genre
 
-var sqlAuthorGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
+//maybe 6?
+var sqlAuthorGenreSchema =  Schemas.OPTION_6; // TODO: Update this constant
 // TODO: Write a comment here explaining your choice
+//many to many relationship, possible need intermediate table?

@@ -7,7 +7,7 @@ var getWordCount = function(filePath, callback) {
       callback(err, null);
       return;
     }
-
+    //split sentences into words, omitting white space
     var wordCount = data.trim().split(' ').length;
     callback(null, wordCount);
   });
@@ -15,6 +15,14 @@ var getWordCount = function(filePath, callback) {
 
 var getTotalWordCount = function(filePathOne, filePathTwo, callback) {
   // YOUR CODE HERE
+  //get into the first file, callback with wordCount from first file
+  getWordCount(filePathOne, (err,firsWordCount) => {
+    //get into the second file, callback with wordCount from second file
+    getWordCount(filePathTwo, (err,secondWordCount) => {
+      //combine both
+      callback(err, firsWordCount + secondWordCount)
+    });
+  })
 };
 
 module.exports = getTotalWordCount;
