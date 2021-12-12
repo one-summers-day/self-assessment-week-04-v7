@@ -9,11 +9,22 @@ var Schemas = {
   OPTION_6: 'option 6'
 };
 
-var sqlPublisherAuthorSchema =  Schemas.FIX_ME; // TODO: Update this constant
-// TODO: Write a comment here explaining your choice
+// publisher, has many authors, has one genre
+// author, has many publishers, has many genres
+// genre, has many publishers, has many authors
 
-var sqlPublisherGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
-// TODO: Write a comment here explaining your choice
 
-var sqlAuthorGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
-// TODO: Write a comment here explaining your choice
+var sqlPublisherAuthorSchema =  Schemas.OPTION_6; // Publisher <---> Author
+// since "publisher has many authors " so having third table that has a foreign key
+//as both publisher and authors
+//would help managing data and looking up easier, because Publisher has many authors and also author can work in many ///publisher too
+
+
+
+var sqlPublisherGenreSchema =  Schemas.OPTION_4; // Publisher <---> Genre 
+// because publisher has ONLY ONE genre, but genre has many publisher
+//
+
+var sqlAuthorGenreSchema =  Schemas.OPTION_6; // Author <---> Genre many - many
+// genre, has many publishers and many authors, so that one author can have many genre
+// having foreign key of author and genre on thrid table would be the best way to look up a data
