@@ -30,6 +30,6 @@ var getTotalWordCount = function(filePathOne, filePathTwo, callback) {
     }
   })
 };
-//getTotalWordCount('async-word-count/files/fileOne.txt', 'async-word-count/files/fileTwo.txt', console.log) // need to pass down first word count
+//getTotalWordCount('async-word-count/files/fileOne.txt', 'async-word-count/files/fileTwo.txt', console.log) // need to pass down first word count 
 //getWordCount('async-word-count/files/fileOne.txt', console.log) returns 79
 module.exports = getTotalWordCount;
