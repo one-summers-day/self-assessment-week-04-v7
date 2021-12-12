@@ -6,7 +6,7 @@ Hackers or packet sniffers can see plain text passwords through network data or 
 
 - Encrypted passwords
 
-If you figure out the decryption protocol for one password (or enough passwords given a sample size larger than 1), you can easily figure out the rest of the pattern for how data is encrypted. Also, encrypted files can be large and not easy to store.
+If you figure out the decryption protocol for one password (or enough passwords given a sample size larger than 1), you can easily figure out the rest of the pattern for how data is encrypted. Also, encrypted files can be large and not easy to store. Therefore a different set of data should be created thats easier to encrypt and store. And that's why we use...
 
 - Hashed passwords
 
