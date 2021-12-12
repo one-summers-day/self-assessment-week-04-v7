@@ -9,11 +9,21 @@ var Schemas = {
   OPTION_6: 'option 6'
 };
 
-var sqlPublisherAuthorSchema =  Schemas.FIX_ME; // TODO: Update this constant
-// TODO: Write a comment here explaining your choice
 
-var sqlPublisherGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
-// TODO: Write a comment here explaining your choice
+// publisher and authors is many to many
+//publishes to genre is many to one
+//author to genre is many to many
+//genre to publishes is many to many
+var sqlPublisherAuthorSchema =  Schemas.OPTION_6;
+// author and publishes have a many to many relationship
+// there are multiple authors for each publisher and multiple publishers for each author
+//option 6 combines the many to many relationship with
+//an association table
 
-var sqlAuthorGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
-// TODO: Write a comment here explaining your choice
+var sqlPublisherGenreSchema =  Schemas.OPTION_4; // TODO:
+//publishers have one genre
+//genres have many publishers = one to many
+
+var sqlAuthorGenreSchema =  Schemas.OPTION_6;
+//Genre has many authors/ authors has many genres = many to many relationship
+//Many to many relationship is brought together with an association table
