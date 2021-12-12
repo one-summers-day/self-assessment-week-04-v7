@@ -6,3 +6,5 @@ Explain why each system fails, and how to guard against that failure:
 
 - Hashed passwords
 
+//Did not done authentication sprint.
+

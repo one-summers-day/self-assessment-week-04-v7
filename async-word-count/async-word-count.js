@@ -13,16 +13,20 @@ var getWordCount = function (filePath, callback) {
   });
 };
 
+//I had some issues with debugging here
+
+
 var getTotalWordCount = function (filePathOne, filePathTwo, callback) {
   getWordCount(filePathOne, (err, filePathOneCallback) => {
     if (err) {
-      callback(err, null); //callback(err, null) or just err ???
+      callback(err, null); //callback(err, null) or just callback(err) ???
     } else {
       getWordCount(filePathTwo, (err, filePathTwoCallback) => {
         if (err) {
           callback(err, null);
         } else {
           var totalWordCount = filePathOneCallback + filePathTwoCallback;
+          //Should I do callback(null, totalWordCount)??Can I return totalWordCount?
           callback(null, totalWordCount);
         }
       })
