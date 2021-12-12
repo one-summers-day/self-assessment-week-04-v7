@@ -9,11 +9,18 @@ var Schemas = {
   OPTION_6: 'option 6'
 };
 
-var sqlPublisherAuthorSchema =  Schemas.FIX_ME; // TODO: Update this constant
+var sqlPublisherAuthorSchema =  Schemas.OPTION_6; // TODO: Update this constant
 // TODO: Write a comment here explaining your choice
+// relationship in pubsliher_author shows that there are multiple id's for both the publisher and the author
+// however there is no genre, mentioned so there can only be one ?
 
-var sqlPublisherGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
-// TODO: Write a comment here explaining your choice
 
-var sqlAuthorGenreSchema =  Schemas.FIX_ME; // TODO: Update this constant
+var sqlPublisherGenreSchema =  Schemas.OPTION_4; // TODO: Update this constant
 // TODO: Write a comment here explaining your choice
+// relationship shows that there are multiple genre's since publisher
+// has a genre id
+var sqlAuthorGenreSchema =  Schemas.OPTION_6; // TODO: Update this constant
+// TODO: Write a comment here explaining your choice
+// relationship in this one shows that there are individual authors
+// beacuse author_genre exists we know that this table generates
+// multiple genres for each author and genre
