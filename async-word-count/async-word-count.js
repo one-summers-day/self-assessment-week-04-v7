@@ -14,24 +14,28 @@ var getWordCount = function(filePath, callback) {
 };
 
 var getTotalWordCount = function(filePathOne, filePathTwo, callback) {
-  var myLittleArray = [];
-  var myLittleCallBack = function(...myLittleArguments) {
-    myLittleArray.push(myLittleArguments[1])
-  }
+  var wordCountOne = 0;
+  var wordCountTwo = 0;
 
-  getWordCount(filePathOne, myLittleCallBack);
-  if (myLittleArray.includes(null)){
-    throw new Error('Yikes! There was an error in attaining the word count for filePathOne :(');
-    return;
-  }
+  fs.readFile(filePathOne, 'utf-8', function(err, data) {
+    if (err) {
+      callback(err, null);
+      return;
+    }
 
-  getWordCount(filePathTwo, myLittleCallBack);
-  if (myLittleArray.includes(null)){
-    throw new Error('Yikes! There was an error in attaining the word count for filePathTwo :(');
-    return;
-  };
+    wordCountOne = data.trim().split(' ').length;
+  });
 
-  callback(myLittleArray[0] + myLittleArray[1])
+  fs.readFile(filePathTwo, 'utf-8', function(err, data) {
+    if (err) {
+      callback(err, null);
+      return;
+    }
+
+    wordCountTwo = data.trim().split(' ').length;
+  });
+
+  callback(null, (wordCountOne + wordCountTwo));
 };
 
 module.exports = getTotalWordCount;
