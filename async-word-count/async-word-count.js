@@ -14,8 +14,7 @@ var getWordCount = function(filePath, callback) {
 };
 
 var getTotalWordCount = function(filePathOne, filePathTwo, callback) {
-  var wordCountOne = 0;
-  var wordCountTwo = 0;
+  var myLittleArray = [];
 
   fs.readFile(filePathOne, 'utf-8', function(err, data) {
     if (err) {
@@ -23,7 +22,8 @@ var getTotalWordCount = function(filePathOne, filePathTwo, callback) {
       return;
     }
 
-    wordCountOne = data.trim().split(' ').length;
+    var wordCount = data.trim().split(' ').length;
+    myLittleArray.push(wordCount);
   });
 
   fs.readFile(filePathTwo, 'utf-8', function(err, data) {
@@ -32,10 +32,11 @@ var getTotalWordCount = function(filePathOne, filePathTwo, callback) {
       return;
     }
 
-    wordCountTwo = data.trim().split(' ').length;
+    var wordCount = data.trim().split(' ').length;
+    myLittleArray.push(wordCount);
   });
 
-  callback(null, (wordCountOne + wordCountTwo));
+  callback(null, (myLittleArray[0] + myLittleArray[1]));
 };
 
 module.exports = getTotalWordCount;
