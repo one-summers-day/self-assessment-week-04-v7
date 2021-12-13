@@ -13,9 +13,9 @@ var sqlPublisherAuthorSchema =  Schemas.OPTION_6; // TODO: Update this constant
 // TODO: Write a comment here explaining your choice
 /* Since publisher has many authors and authors has many publishers, we have a many to many relationship, which should be handled with third joined table */
 
-var sqlPublisherGenreSchema =  Schemas.OPTION_3; // TODO: Update this constant
+var sqlPublisherGenreSchema =  Schemas.OPTION_4; // TODO: Update this constant
 // TODO: Write a comment here explaining your choice
-/* Since publisher only has one genre, we should set publisher's id to be genre's foreign id */
+/* Since publisher only has one genre, we should set genre's id to be publisher's foreign id */
 var sqlAuthorGenreSchema =  Schemas.OPTION_6; // TODO: Update this constant
 // TODO: Write a comment here explaining your choice
 /* Since publisher has many authors and authors has many publishers, we have a many to many relationship, which should be handled with third joined table */

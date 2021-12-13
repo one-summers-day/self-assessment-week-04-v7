@@ -18,12 +18,12 @@ var getTotalWordCount = function(filePathOne, filePathTwo, callback) {
   // YOUR CODE HERE
   getWordCount(filePathOne, (err, data) => {
     if (err) {
-      console.log('Error :', err);
+      callback('Error :', err);
     } else {
       let wordCount = data;
       getWordCount(filePathTwo, (err, dataTwo) => {
         if (err) {
-          console.log('Error :', err);
+          callback('Error :', err);
         } else {
           let total = wordCount + dataTwo;
           callback(null, total);
