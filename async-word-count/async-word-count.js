@@ -29,8 +29,9 @@ var getTotalWordCount = function(filePathOne, filePathTwo, callback) {
   if (myLittleArray.includes(null)){
     throw new Error('Yikes! There was an error in attaining the word count for filePathTwo :(');
     return;
+  };
 
-    callback(myLittleArray[0] + myLittleArray[1])
+  callback(myLittleArray[0] + myLittleArray[1])
 };
 
 module.exports = getTotalWordCount;
